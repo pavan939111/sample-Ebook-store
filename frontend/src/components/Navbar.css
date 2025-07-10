@@ -1,0 +1,129 @@
+/* === Navbar Container === */
+/* Default: Desktop Layout */
+.navbar {
+  background-color: #007bff;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 14px;
+  height: 60px;
+}
+
+/* Mobile: Stack title + menu vertically */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    padding: 0;
+  }
+}
+
+
+
+
+/* === Title === */
+.navbar-title {
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* === Toggle (☰) for Mobile Only === */
+.navbar-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* === Links === */
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 24px;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+}
+
+.navbar-links a,
+.navbar-links span {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover,
+.navbar-links span:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+/* === Mobile Styles === */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 0;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+  }
+  .navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    padding: 0 16px;
+    background-color: #007bff;
+  }
+
+  .navbar-toggle {
+    display: block;
+    color: white;
+   
+  }
+
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 50px; /* below the fixed navbar */
+    right: 0;
+    width: 60vw; /* 60% width from the left */
+    height: auto;
+    background-color: rgba(0, 123, 255, 0.85); /* semi-transparent */
+    border-top: 1px solid #fff;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    padding: 8px 12px;
+    border-radius: 0 10px 10px 0;
+    z-index: 1001;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .navbar-links a,
+  .navbar-links span {
+    width: 100%;
+    padding: 3px 0;
+    text-align: left;
+    color: white;
+    font-size: 15px
+  }
+}
+

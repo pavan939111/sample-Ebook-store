@@ -1,0 +1,130 @@
+/* Home.css */
+
+/* General container for all pages */
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Navbar stays fixed at the top */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* ---------- WELCOME PAGE STYLING ---------- */
+
+/* Background image + overlay */
+.welcome-background {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('https://media.gettyimages.https://t4.ftcdn.net/jpg/0https://t4.ftcdn.net/jpg/03/77/77/97/360_F_377779745_G0tIYNhq1WcHNlcZfVWGXQwyo43nxCf3.jpg3/77/77/97/360_F_377779745_G0tIYNhq1WcHNlcZfVWGXQwyo43nxCf3.jpgcom/id/1289197192/vector/online-education.jpg?s=612x612&w=0&k=20&c=qg2DnumWcsrgLgJgSpfCGWLHAg1hxi0aJD1UmqQ9QJk=');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dark overlay */
+.welcome-background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 0;
+}
+
+/* Welcome message content */
+.welcome-message {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.welcome-message h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-message p {
+  font-size: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+/* ---------- MAIN CONTENT PAGE (BookList with Sidebar) ---------- */
+
+.main-content {
+  display: flex;
+  flex: 1;
+  margin-top: 60px; /* Adjust if Navbar has different height */
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  height: 100%;
+  padding: 1rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  left: 0;
+  top: 60px; /* height of navbar */
+  bottom: 0;
+  overflow-y: auto;
+  z-index: 5;
+}
+
+/* Booklist area beside sidebar */
+.booklist-wrapper {
+  margin-left: 250px; /* Same as sidebar width */
+  padding: 1rem 2rem;
+  height: calc(100vh - 60px); /* full height minus navbar */
+  overflow-y: auto;
+  flex: 1;
+}
+/* Only show desktop sidebar on desktop */
+.desktop-only {
+  display: block;
+}
+
+.mobile-sidebar {
+  display: none;
+}
+
+/* Show mobile sidebar on mobile screens only */
+@media screen and (max-width: 768px) {
+  .sidebar.desktop-only {
+    display: none;
+  }
+
+  .mobile-sidebar {
+    display: block;
+    margin-top: 0px; /* below navbar */
+  }
+
+  .main-content {
+    flex-direction:row;
+    margin-left: 0;
+  }
+
+  .booklist-wrapper {
+    margin-left: 0;
+    padding: 1rem;
+    margin-top: 50px;
+  }
+}

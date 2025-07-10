@@ -1,0 +1,61 @@
+/* General container */
+.profile-container {
+  padding-top: 80px; /* Space below fixed navbar */
+  max-width: 600px;
+  margin: 0 auto;
+  padding:16px;
+   margin-top: 100px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.profile-header {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+/* Profile details */
+.profile-info p {
+  font-size: 18px;
+  margin: 12px 0;
+  color: #555;
+}
+
+.profile-info strong {
+  color: #000;
+}
+
+/* Error */
+.profile-error {
+  padding-top: 100px;
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 768px) {
+  .profile-container {
+    padding: 60px 12px 20px;
+    margin: 0 12px;
+    box-shadow: none;
+    border-radius: 8px;
+    background-color: #fefefe;
+    margin-top: 60px;
+  }
+
+  .profile-header {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .profile-info p {
+    font-size: 15px;
+    margin: 8px 0;
+  }
+}

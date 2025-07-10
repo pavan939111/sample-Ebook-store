@@ -1,0 +1,96 @@
+/* AddBook.css */
+
+/* Reset box-sizing for consistency */
+* {
+  box-sizing: border-box;
+}
+
+.add-book-container {
+  margin: 80px auto;
+  max-width: 500px;
+  width: 90%; /* Ensures responsiveness */
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Heading */
+.add-book-container h2 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+
+/* Form */
+.add-book-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inputs and textarea */
+.add-book-form input,
+.add-book-form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+.add-book-form input:focus,
+.add-book-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.add-book-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Button */
+.add-book-form button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-book-form button:hover {
+  background-color: #0056b3;
+}
+
+/* === Mobile Responsiveness === */
+@media screen and (max-width: 768px) {
+  .add-book-container {
+    margin-top: 70px;
+    padding: 20px;
+    width: 92%;
+  }
+
+  .add-book-container h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .add-book-form input,
+  .add-book-form textarea {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .add-book-form button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}

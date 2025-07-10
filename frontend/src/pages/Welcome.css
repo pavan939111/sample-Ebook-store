@@ -1,0 +1,64 @@
+/* === Welcome Background with Full-Screen Image === */
+.welcome-background {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('https://t4.ftcdn.net/jpg/03/77/77/97/360_F_377779745_G0tIYNhq1WcHNlcZfVWGXQwyo43nxCf3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Dark Overlay */
+.welcome-background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Message Content */
+.welcome-message {
+  position: relative;
+  z-index: 1;
+  color: white;
+  max-width: 90%;
+  padding: 1rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.welcome-message h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.welcome-message p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+/* === Responsive Adjustments === */
+@media screen and (max-width: 768px) {
+  .welcome-message h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-message p {
+    font-size: 1rem;
+  }
+
+  .welcome-background {
+    padding: 1.5rem;
+    background-size: cover;
+    background-position: center;
+  }
+}
