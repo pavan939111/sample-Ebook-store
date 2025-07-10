@@ -13,7 +13,7 @@ function BookList({ selectedGenre = 'All' }) {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/books');
+        const response = await fetch('https://sample-ebook-store.onrender.com/api/books');
         if (!response.ok) throw new Error('Failed to fetch books');
         const data = await response.json();
         setBooks(data);
@@ -52,7 +52,7 @@ function BookList({ selectedGenre = 'All' }) {
     setAddingToCart(bookTitle);
 
     try {
-      const response = await fetch('http://localhost:5000/api/cart/add', {
+      const response = await fetch('https://sample-ebook-store.onrender.com/api/cart/add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

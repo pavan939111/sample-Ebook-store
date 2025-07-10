@@ -25,7 +25,7 @@ const Catalogue = () => {
   const fetchCartItems = async (username) => {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:5000/api/cart/${username}`);
+      const response = await fetch(`https://sample-ebook-store.onrender.com/api/cart/${username}`);
 
       if (!response.ok) {
         throw new Error('Failed to fetch cart items');

@@ -12,7 +12,7 @@ function Profile() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/user/${username}`); // ✅ Updated route
+        const res = await axios.get(`https://sample-ebook-store.onrender.com/api/user/${username}`); // ✅ Updated route
         setUser(res.data);
       } catch (err) {
         console.error(err);

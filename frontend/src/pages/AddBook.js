@@ -26,7 +26,7 @@ function AddBook() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/books/addbook', formData); // ✅ Updated route
+      const res = await axios.post('https://sample-ebook-store.onrender.com/api/books/addbook', formData); // ✅ Updated route
       alert(res.data.message || "Book added!");
       setFormData({ title: '', author: '', description: '', price: '', genre: '', image: '' });
       navigate('/home');

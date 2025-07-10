@@ -13,7 +13,7 @@ function SearchPage() {
 
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/books/search?title=${query}`);
+      const response = await axios.get(`https://sample-ebook-store.onrender.com/api/books/search?title=${query}`);
       setBooks(response.data);
       setSearched(true);
     } catch (error) {
@@ -30,7 +30,7 @@ function SearchPage() {
     setAddingToCart(bookTitle);
 
     try {
-      const response = await fetch('http://localhost:5000/api/cart/add', {
+      const response = await fetch('https://sample-ebook-store.onrender.com/api/cart/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, bookId: bookTitle }),
